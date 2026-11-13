@@ -56,17 +56,19 @@ All lengths are in millimetres.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `token_height` | 10 | Overall height. The color change is at half this height. |
-| `token_faces` | 200 | Number of sides of the cross-section (3 minimum). |
+| `token_height` | 10 | Overall height. |
+| `token_faces` | 200 | Number of sides of the cross-section (3 to 600). |
 | `bottom_diameter` | 20 | Diameter of the bottom face (the face with the recess, up on the plate). |
-| `neck_diameter` | 20 | Diameter at mid-height, where the colors meet. |
+| `neck_diameter` | 20 | Diameter at the neck, where the colors meet. |
 | `top_diameter` | 20 | Diameter of the top face (down on the plate). |
-| `make_recess` | 1 | 1 for a magnet recess in the bottom face, 0 for none. |
+| `neck_fraction` | 0.5 | Height of the neck as a fraction of the token height, measured from the top face. This is also the share of the print done in the first color. |
+| `make_recess` | true | Cut a recess in the bottom face. |
 | `magnet_diameter` | 8 | Diameter of the magnet. |
 | `magnet_height` | 2.5 | Thickness of the magnet. |
 | `magnet_extension` | 0.2 | How far the magnet stands proud of the face (positive) or sits below it (negative). |
 | `recess_play` | 0.4 | Extra diameter added to the recess so the magnet fits. |
-| `layer_overlap` | 0.05 | Small overlap between the two color layers. |
+| `recess_faces` | 200 | Number of sides of the round recess. |
+| `layer_overlap` | 0.05 | How far the top layer reaches into the bottom layer so the two fuse. It does not change the token's height. |
 | `top_color` | `"red"` | Preview color of the top layer. |
 | `bottom_color` | `"#00FFFF"` | Preview color of the bottom layer. |
 
@@ -79,6 +81,10 @@ a point can't sit on the build plate; in play, a pyramid stands on its top face.
 
 Because the token prints upside down, a bottom that is much wider than the top
 gives sides that overhang as they print. Keep that slope modest or add supports.
+
+The model checks its settings and stops with an explanation if the recess would
+be wider than the token where it is cut, deeper than the token, or so shallow
+that it disappears.
 
 ## Two-color tokens
 
