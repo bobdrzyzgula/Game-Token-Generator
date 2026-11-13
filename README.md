@@ -17,10 +17,6 @@ A token can:
 - have an optional round recess in one face for a magnet, or for a flag or other
   marker.
 
-The model is also published on MakerWorld as
-[Game Token Generator](https://makerworld.com/en/models/3348797-game-token-generator),
-along with sample plates.
-
 ## Files
 
 | File | What it is |
