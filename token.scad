@@ -3,7 +3,7 @@
 
 // Game Token 0.1
 //
-// This is some simple OpenSCAD code to generate a game token. This
+// This is some simple OpenSCAD code to generate a game token.
 // 
 // The token may:
 // 
@@ -27,7 +27,7 @@
 token_height = 10;
 // Number of faces for token, three minimum. 200 faces make a good round token.
 token_faces = 200;
-// Diameter of token bottom. The token prints bottom-side up so that the magnet recess can brint without supports, so the language can be confusing here. Also be careful not to slope the sides too steeply outward from the bottom (cantalevered), or you may need to use supports.
+// Diameter of token bottom. The token prints bottom-side up so that the magnet recess can print without supports, so the language can be confusing here. Also be careful not to slope the sides too steeply outward from the bottom (cantilevered), or you may need to use supports.
 bottom_diameter = 20;
 // Neck diameter.
 neck_diameter = 20;
